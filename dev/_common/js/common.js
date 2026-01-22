@@ -29,7 +29,9 @@ function frame1() {
 
   tl.from(".ypy", { duration: 0.3, stagger: 0.3, opacity: 0, y: "-=100" }, "+=.2");
 
-  tl.from(".hero2", { duration: 0.5, opacity: 0 }, "+=.6");
+  if (document.querySelector(".hero2")) {
+    tl.from(".hero2", { duration: 0.5, opacity: 0 }, "+=1");
+  }
 
   return tl;
 }
