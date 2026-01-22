@@ -1,4 +1,4 @@
-import { read, frame1 } from "../../_common/js/common.js";
+import { read, frame1, olg } from "../../_common/js/common.js";
 
 function init() {
   const tl = frame1();

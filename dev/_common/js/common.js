@@ -29,13 +29,20 @@ function frame1() {
 
   tl.from(".ypy", { duration: 0.3, stagger: 0.3, opacity: 0, y: "-=100" }, "+=.2");
 
-  tl.from(".hero2", {
-    "--p": "0%",
-    duration: 0.3,
-    ease: "power2.in",
-  });
+  const hero2Exist = document.querySelector(".hero2");
+  if (hero2Exist) {
+    tl.from(
+      ".hero2",
+      {
+        "--p": "0%",
+        duration: 0.3,
+        ease: "power2.in",
+      },
+      "+=.5",
+    );
 
-  tl.set(".hero2", { "--p": "unset" });
+    tl.set(".hero2", { clearProps: "--p" });
+  }
 
   return tl;
 }
