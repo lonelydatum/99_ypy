@@ -17,10 +17,10 @@ const read = READ_ALL[universalBanner.name];
 const { w, h } = bannerSize;
 
 function frame1() {
-  const tl = gsap.timeline({
+  const tl = new TimelineMax({
     onComplete: () => {
       if (document.getElementById("legalBtn")) {
-        gsap.set("#legalBtn", { display: "block" });
+        TweenLite.set("#legalBtn", { display: "block" });
       }
     },
   });
@@ -29,22 +29,7 @@ function frame1() {
 
   tl.from(".ypy", { duration: 0.3, stagger: 0.3, opacity: 0, y: "-=100" }, "+=.2");
 
-  const hero2Exist = document.querySelector(".hero2");
-  if (hero2Exist) {
-    tl.from(
-      ".hero2",
-      {
-        opacity: 0,
-        "--p": "0%",
-        duration: 0.3,
-        ease: "power2.out",
-      },
-      "+=.5",
-    );
-
-    // tl.set(".hero2", { clearProps: ["--p", "--feather"] });
-    tl.set(".hero2", { "--feather": 0 });
-  }
+  tl.from(".hero2", { duration: 0.5, opacity: 0 }, "+=.6");
 
   return tl;
 }
