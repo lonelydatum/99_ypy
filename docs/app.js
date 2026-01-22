@@ -55,7 +55,9 @@ function mount() {
   const btnShot = document.createElement("button");
   btnShot.textContent = "screenshot";
   btnShot.className = "btn-shot";
-  below.appendChild(btnShot);
+  if (window.location.host.includes("localhost")) {
+    below.appendChild(btnShot);
+  }
   btnShot.style.display = "block";
   const dl = document.createElement("a");
   dl.textContent = "download zip file";
