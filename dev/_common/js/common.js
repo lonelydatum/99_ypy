@@ -34,14 +34,16 @@ function frame1() {
     tl.from(
       ".hero2",
       {
+        opacity: 0,
         "--p": "0%",
         duration: 0.3,
-        ease: "power2.in",
+        ease: "power2.out",
       },
       "+=.5",
     );
 
-    tl.set(".hero2", { clearProps: "--p" });
+    // tl.set(".hero2", { clearProps: ["--p", "--feather"] });
+    tl.set(".hero2", { "--feather": 0 });
   }
 
   return tl;
