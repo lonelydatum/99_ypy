@@ -1,0 +1,101 @@
+@import './mixins.scss';
+@import './reset.scss';
+@import './olg.scss';
+
+
+/*--------------------------------------------*/
+/* common */
+/*--------------------------------------------*/
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	// background-color: red;
+}
+
+
+
+#banner{
+	background-color: white;
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	-webkit-text-size-adjust: 100%;
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+	cursor: pointer;
+	& > a {
+		width: inherit;
+		height: inherit;
+	}
+}
+
+canvas, .text, .frame, .outline, img{
+	position: absolute;
+}
+
+img{
+	
+}
+
+.outline{
+	z-index: 99;
+	width: inherit;
+	height: inherit;
+	border: 1px solid black;
+	pointer-events: none;
+	position: absolute;
+}
+
+.frame{
+	width: inherit;
+	height: inherit;
+	
+	opacity: 0;
+	top:0;
+	overflow: hidden;
+	left:0;
+	
+}
+
+
+.shadow{	
+	filter: drop-shadow(3px 3px 8px rgba(0,0,0,.5));
+}
+
+
+
+
+.retina{
+	@include pos-scale(0, 0, .5);
+	transform-origin: 0 0 ;
+	image-rendering: -webkit-optimize-contrast;
+	
+}
+
+
+
+
+
+.pointer-events-none{
+	pointer-events: none;
+}
+
+.hide-until {
+	visibility: hidden;
+}

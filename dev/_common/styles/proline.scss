@@ -1,0 +1,37 @@
+@import './common.scss';
+
+#legalBtn:hover ~ #legalContent {
+	opacity: 1;
+	
+}
+
+#legalContent{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.9);
+	@include pos(0, 0);
+	color: white;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 3px;
+	font-size: 8px;
+	z-index: 90;
+	opacity: 0;
+	font-weight: normal;
+	line-height: 9px;
+	transition: opacity .3s;
+	pointer-events: none;
+}
+
+
+#legalBtn{	
+	@include pos(0, 0);
+	opacity: 1;
+	width: 36px;
+	height: 25px;
+	background-color: red;
+	opacity: 0;
+}
+
+.ill{
+	transform-origin: 50% 100%;
+}

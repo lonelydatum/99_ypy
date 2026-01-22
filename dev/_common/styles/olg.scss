@@ -1,0 +1,49 @@
+
+
+#legalBtn:hover ~ #legalContent {
+	opacity: 1;
+	
+}
+
+#legalContent{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	@include pos(0, 0);
+	color: black;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 10px;
+	font-size: 9px;
+	z-index: 900;
+	opacity: 0;
+	font-weight: normal;
+	line-height: 11px;
+	transition: opacity .3s;
+	pointer-events: none;
+	border: 1px solid black;
+	padding-top: 10px;
+}
+
+
+#legalBtn{	
+	@include pos(0, 0);
+	opacity: 0;
+	width: 36px;
+	height: 25px;
+	z-index: 11;
+	background-color: red;
+	display: none;
+}
+
+
+#olg{
+	opacity: 0;
+}
+#bluewedge2, #redwedge2 {
+    visibility:hidden;
+}
+
+#bluewedge1, #redwedge1 {
+    transform-origin: 0% 100% !important;
+    @include prefix( translate(0px, 0px) scale(1, 0) );
+}

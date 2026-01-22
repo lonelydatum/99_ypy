@@ -1,0 +1,20 @@
+@import "./common.scss";
+@import "./ypy.scss";
+
+#banner {
+  width: 160px;
+  height: 600px;
+}
+
+#olg {
+  width: 87px;
+  height: 49px;
+  @include pos(0, 555);
+  // opacity: .5 !important;
+}
+
+#legalBtn {
+  @include pos(86, 0);
+  width: 72px;
+  // opacity: 1;
+}

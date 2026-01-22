@@ -1,0 +1,25 @@
+@import './common.scss';
+
+#banner{
+ width: 1000px;
+ height: 700px; 
+}
+
+
+#olg{
+	// border: 1px solid red;
+	width: 180px;
+	height: 91px;
+	@include pos(-2, 611);
+	// opacity: .5 !important;
+}
+
+
+
+
+#legalBtn{	
+	@include pos(920, 605);	
+	width: 140px;
+	height: 80px;
+	// opacity: 1 !important;
+}

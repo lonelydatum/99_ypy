@@ -1,0 +1,29 @@
+{
+  "name": "banner-build",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "release": "npm run build && npm run zip && npm run serve",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "zip": "node scripts/zip-banners.mjs",
+    "dev": "node scripts/dev.mjs",
+    "tinyimages": "node scripts/optimize-images.cjs",
+    "dev:banner": "node scripts/dev.mjs --banner"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "browser-sync": "^3.0.4",
+    "chokidar": "^4.0.3",
+    "ejs": "^3.1.10",
+    "esbuild": "^0.25.0",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.2.0",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "optipng-bin": "^9.0.0",
+    "pngquant-bin": "^9.0.0",
+    "sharp": "^0.34.5"
+  }
+}

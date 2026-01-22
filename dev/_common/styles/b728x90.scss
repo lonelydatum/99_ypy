@@ -1,0 +1,23 @@
+@import "./common.scss";
+@import "./ypy.scss";
+
+#banner {
+  width: 728px;
+  height: 90px;
+}
+
+#legalBtn {
+  @include pos(650, 0);
+  width: 80px;
+}
+
+#legalContent {
+  padding: 0;
+  padding-left: 5px;
+}
+
+#olg {
+  width: 100px;
+  height: 69px;
+  @include pos(0, 192);
+}
