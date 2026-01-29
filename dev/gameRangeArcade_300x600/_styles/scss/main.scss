@@ -1,2 +1,6 @@
 @import "../../../_common/styles/b300x600.scss";
 @import "../../../_common/styles/superbowl.scss";
+
+.hero {
+  transform: translate(-60px, -66px) scale(0.7);
+}

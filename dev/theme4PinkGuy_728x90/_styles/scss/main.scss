@@ -1,0 +1,8 @@
+@import "../../../_common/styles/b728x90.scss";
+@import "../../../_common/styles/superbowl.scss";
+
+#olg {
+  width: 115px;
+  height: 69px;
+  @include pos(0, 29);
+}
