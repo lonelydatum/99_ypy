@@ -1,6 +1,3 @@
-
-
-
 <div id="banner" onclick="javascript: window.open(window.clickTag);">
   <div class="outline"></div>
 
@@ -40,27 +37,9 @@
       src="../_common/images/<%= name %>/<%= size %>/bg.jpg"
     />
 
-    <img
-      class="end_txt retina"
-      src="../_common/images/<%= name %>/<%= size %>/end_txt.png"
-    />
-    <img
-      class="end_cta retina"
-      src="../_common/images/<%= name %>/<%= size %>/end_cta.png"
-    />
-    <img
-      class="end_device retina"
-      src="../_common/images/<%= name %>/<%= size %>/end_device.png"
-    />
-    <img
-      class="end_legal retina"
-      src="../_common/images/<%= name %>/<%= size %>/end_legal.png"
-    />
+  <%- include('./_endFrame') %>
   </div>
-
-  <img class="logo retina" src="../_common/images/olg_<%= size %>.png" />
-  <img class="ps retina" src="../_common/images/ps_<%= size %>.png" /> 
-
+ 
     
   <%- include('./_end') %>
   
