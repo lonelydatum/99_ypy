@@ -12,6 +12,9 @@
     <img class="ypy ypy_3 retina" src="../_common/images/<%= name %>/<%= size %>/ypy_3.png" />
 
     <img class="t1 retina" src="../_common/images/<%= name %>/<%= size %>/t1.png" />
+     <% if (typeof t2 !== 'undefined' && t2) { %>
+      <%- include(t2) %>
+    <% } %>
 
     <img class="end_txt retina" src="../_common/images/<%= name %>/<%= size %>/end_txt.png" />
     <img class="end_cta retina" src="../_common/images/<%= name %>/<%= size %>/end_cta.png" />

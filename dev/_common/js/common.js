@@ -54,9 +54,10 @@ Must be 19 years of age or older and a resident of Ontario, located in the provi
       "© 2026 IGT.<br/> Must be 19 years of age or older and a resident of Ontario, located in the province to play online casino games. Games may not appear as shown. Odds vary by game. Terms and conditions apply.<br/> *Voted most trusted Online Casino brand by Ontario shoppers based on the 2026 Brandspark® Canadian Trust Study.",
   },
   exclusive: {
-    t1: 5,
+    t1: 1.2,
+    t2: 3.7,
     legal:
-      "©2026 Blueprint. All rights reserved. Must be 19 years of age or older and a resident of Ontario, located in the province to play online casino games. Games may not appear as shown. Odds vary by game. Terms and conditions apply.",
+      "© 2026 IGT<br/> ©2026 Blueprint. All rights reserved. Must be 19 years of age or older and a resident of Ontario, located in the province to play online casino games. Games may not appear as shown. Odds vary by game. Terms and conditions apply.",
   },
   saintPatty: {
     t1: 2.6,
@@ -68,9 +69,11 @@ Must be 19 years of age or older and a resident of Ontario, located in the provi
 };
 const read = READ_ALL[universalBanner.name];
 
+console.log(read);
+
 if (read.legal) {
-  document.getElementById("legalContent").innerHTML =
-    universalBanner.size === "320x50" ? read.legal.replace("<br/>", "") : read.legal;
+  document.getElementById("legalContent").innerHTML = read.legal;
+  // universalBanner.size === "320x50" ? read.legal.replace("<br/>", "") : read.legal;
 }
 
 function frame1() {
@@ -132,6 +135,10 @@ function verticalNoHero() {
   const tl = frame1();
   tl.from(".t1", { duration: 0.3, opacity: 0 });
   tl.to(".t1", { duration: 0.3, opacity: 0 }, `+=${read.t1}`);
+  if (document.querySelector(".t2")) {
+    tl.from(".t2", { duration: 0.3, opacity: 0 }, "+=.3");
+    tl.to(".t2", { duration: 0.3, opacity: 0 }, `+=${read.t2}`);
+  }
   tl.from(".end_txt", { duration: 0.3, opacity: 0 }, `+=.3`);
   tl.from(".end_cta", { duration: 0.3, opacity: 0 }, `+=.3`);
   tl.to(".logo", { duration: 0.3, opacity: 0, y: "+=50" }, `+=.3`);
