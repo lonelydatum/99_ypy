@@ -1,3 +1,2 @@
-import { init } from "../../_common/js/common.js";
-
-init();
+import { verticalNoHero } from "../../_common/js/common.js";
+verticalNoHero();

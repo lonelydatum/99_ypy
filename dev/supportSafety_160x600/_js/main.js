@@ -5,7 +5,7 @@ function init() {
   tl.from(".device", { duration: 0.5, opacity: 0 });
 
   tl.from(".t1", { duration: 0.5, opacity: 0 }, "+=.3");
-  tl.to(".t1", { duration: 0.3, opacity: 0 }, `+=${read.t1}`);
+  tl.to(".t1", { duration: 0.3, opacity: 0 }, `+=${read.t1 + read.t2}`);
 
   tl.from([".bg", ".end_legal"], { duration: 0.3, opacity: 0 });
   tl.from(".end_device", { duration: 0.3, opacity: 0 }, `+=.3`);
